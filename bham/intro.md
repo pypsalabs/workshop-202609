@@ -73,22 +73,19 @@ Some familiarity with Python and `pandas` is helpful, but not required. Short in
 
 [Dr. Fabian Neumann](https://fneum.org) and [Dr. Iegor Riepin](https://iriepin.com/) are postdoctoral researchers at the
 [Department of Digital Transformation in Energy Systems](https://www.tu.berlin/en/ensys)
-at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on resilient energy infrastructure planning and
-strategies for the European energy transition. 
+at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on  identifying cost-effective pathways to climate neutrality, leveraging energy modelling to inform policy and public discourse. 
 
 Fabian and Iegor are also co-founders
 of [PyPSA Labs](https://pypsalabs.org/). 
 
 
 
-## Get started
+## Technical setup
 
 ### Google Colab
 
-No local installation is needed. On any notebook page, click
-**🚀 Open this notebook in Google Colab**. Colab opens the notebook directly
-from GitHub; a Google account is required.
+You can run the notebooks in your browser without installing dependencies locally, using [Google Colab](https://colab.research.google.com/). For that, on any notebook page, click **🚀 Open this notebook in Google Colab**. Colab opens the notebook directly from GitHub; a Google account is required.
 
 ### Local installation
 
-Follow the instructions on the next page if you prefer to run the notebooks on your own computer.
+If you are DIY person and want to run the notebooks on your own computer, you can follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `conda` users.
