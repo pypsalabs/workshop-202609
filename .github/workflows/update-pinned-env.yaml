@@ -1,9 +1,5 @@
 name: Update locked envs
 on:
-  push:
-    paths:
-    - envs/environment.yaml
-    - pyproject.toml
   workflow_dispatch:
 
 env:
