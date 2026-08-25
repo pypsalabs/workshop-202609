@@ -37,9 +37,7 @@ Dependencies are declared in `pyproject.toml` for uv/pip and
 - `requirements.lock` with `pip install -r requirements.lock`
 - `envs/<platform>.lock.yaml` with `conda env create -f envs/<platform>.lock.yaml`
 
-Changes to the dependency specifications trigger an automated lockfile update
-pull request. Pushes to `main` build and deploy the website through GitHub
-Actions. Participant-facing installation instructions are in `bham/setup.md`.
+Pushes to `main` build and deploy the website through GitHub Actions. Lockfiles are generated locally and committed when the dependencies change. Participant-facing installation instructions are in `bham/setup.md`.
 
 ## Credits
 
