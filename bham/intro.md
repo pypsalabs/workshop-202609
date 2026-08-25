@@ -6,7 +6,7 @@
 [Supergen Energy Networks Hub](https://www.supergen-networks.org.uk/) and
 delivered by [PyPSA Labs](https://pypsalabs.org/).*
 
-<img src="https://docs.pypsa.org/latest/assets/logo/logo-primary-light.svg#only-light" width="260px" />
+![A small PyPSA network built, optimised, and explored in Python.](pypsa-terminal.png)
 
 ---
 

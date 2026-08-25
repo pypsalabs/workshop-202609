@@ -13,8 +13,12 @@ bham/*.csv
 *.html
 *.png
 !bham/logo*.png
+!bham/pypsa-terminal.png
 *cleared.ipynb
 data
+
+# local asset-generation utilities
+.local/
 
 # python
 .venv
