@@ -22,4 +22,6 @@ site:
     logo: bham/logo-primary-light.svg
     logo_dark: bham/logo-primary-dark.svg
     folders: true
+    style: bham/workshop.css
+    hide_authors: true
   template: book-theme
