@@ -1,44 +1,45 @@
 # PyPSA Workshop Birmingham (September 2026)
 
-Workshop materials for learning energy system modelling with
-[PyPSA](https://pypsa.org).
+Materials for a hands-on energy system modelling workshop at the
+[University of Birmingham](https://www.birmingham.ac.uk/), externally hosted by
+the [Supergen Energy Networks Hub](https://supergenen.org/) and delivered by
+[PyPSA Labs](https://pypsalabs.org/) staff. See the
+[workshop listing and agenda](https://pypsalabs.org/services/training).
 
 The materials are published as a [Jupyter Book 2](https://jupyterbook.org)
-(MyST) website via GitHub Pages.
+(MyST) website at
+[pypsalabs.github.io/workshop-202609](https://pypsalabs.github.io/workshop-202609/).
 
 ## Usage
 
-### Building the book
+### Develop locally
 
-If you'd like to develop and/or build the book, you should:
+Install [`uv`](https://docs.astral.sh/uv/), clone the repository, and run:
 
-1. Clone this repository
-2. Run `uv sync`
-3. (Optional) Edit the book's source files located in the `bham/` directory
-4. Run `uv run jupyter book start` for a live preview, or
-   `uv run jupyter-book build --html --execute` for a full build
+```sh
+uv sync
+uv run jupyter book start
+```
 
-A fully-rendered HTML version of the book will be built in `_build/html/`.
+This serves a local live preview. Workshop sources are in `bham/`. To execute all notebooks and create the deployable site in
+`_build/html/`, run:
 
-### Deployment
+```sh
+uv run jupyter-book build --html --execute
+```
 
-The book is built and deployed to GitHub Pages automatically on every push to
-`main` (see `.github/workflows/deploy.yml`). Ensure the repository's GitHub
-Pages settings are set to deploy with **GitHub Actions**.
+### Environments and deployment
 
-### Environments
+Dependencies are declared in `pyproject.toml` for uv/pip and
+`envs/environment.yaml` for conda. Reproducible installations use:
 
-The direct dependencies are declared in `pyproject.toml` (pip/uv world) and
-`envs/environment.yaml` (conda world). All pinned lockfiles are generated
-automatically by `.github/workflows/update-pinned-env.yaml`, which opens a
-pull request whenever the loose specifications change:
+- `uv.lock` with `uv sync`
+- `requirements.lock` with `pip install -r requirements.lock`
+- `envs/<platform>.lock.yaml` with `conda env create -f envs/<platform>.lock.yaml`
 
-- `uv.lock` — used by `uv sync` (CI and uv users)
-- `requirements.lock` — for plain pip users (`pip install -r requirements.lock`)
-- `envs/{linux-64,osx-64,osx-arm64,win-64}.lock.yaml` — pinned per-platform
-  conda environments (`conda env create -f envs/<platform>.lock.yaml`)
-
-Participant-facing installation instructions live in `bham/setup.md`.
+Changes to the dependency specifications trigger an automated lockfile update
+pull request. Pushes to `main` build and deploy the website through GitHub
+Actions. Participant-facing installation instructions are in `bham/setup.md`.
 
 ## Credits
 
