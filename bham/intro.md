@@ -27,10 +27,10 @@ annex chapters of this website.
 Checkout the [PyPSA documentation](https://docs.pypsa.org) for more details.
 :::
 
-## Download
+## Run notebooks online
 
-Navigate to the other pages. You will find a download button at the top of
-each page. Download the `.ipynb` file and import it in Google Colab.
+On any notebook page, click **🚀 Open this notebook in Google Colab** near the
+top. Google Colab opens and imports that notebook directly from GitHub.
 
 ## Installation
 
@@ -39,8 +39,8 @@ each page. Download the `.ipynb` file and import it in Google Colab.
 You can begin with the workshop without a local Python installation using online
 services like [Google Colab (colab.google)](https://colab.google) which provide
 an online Python version in a [Jupyter Notebook](https://jupyter.org/)
-environment. This requires a Google account. Import your downloaded `.ipynb`
-file in [Google Colab](https://colab.research.google.com/).
+environment. This requires a Google account. Use the 🚀 Google Colab link on
+each notebook page to start working.
 
 ### Local Installation (advanced)
 
