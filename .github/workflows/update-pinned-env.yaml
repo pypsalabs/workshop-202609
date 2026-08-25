@@ -88,34 +88,3 @@ jobs:
           requirements.lock
           uv.lock
 
-  create-pull-request:
-    needs:
-    - update-conda-locked-environment
-    - update-pip-uv-locked-environment
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v5
-
-    - name: Download conda artifacts
-      uses: actions/download-artifact@v5
-      with:
-        name: lockfiles-conda
-        path: envs/
-    - name: Download uv artifacts
-      uses: actions/download-artifact@v5
-      with:
-        name: lockfiles-uv
-
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v7
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        branch: update-locked-environment
-        title: "[github-actions.ci] Update locked envs"
-        body: |
-          Automatically generated PR to update locked environment files for Windows, macOS, and Linux.
-
-          These files were generated using conda-lock for improved dependency resolution and reproducibility.
-
-          **Note: Do not merge without manual test execution. Either update the branch to trigger tests, or use `workflow_dispatch` to run tests manually. Unlike standard PRs, tests will not run automatically.**
-        commit-message: "Update locked environment files for all platforms"

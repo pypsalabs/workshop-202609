@@ -54,13 +54,13 @@ For **Windows**:
 conda env create -f envs/win-64.lock.yaml
 ```
 
-For **MacOS** (Intel/AMD):
+For **macOS** (Intel/AMD):
 
 ```sh
 conda env create -f envs/osx-64.lock.yaml
 ```
 
-For **MacOS** (Apple Silicon):
+For **macOS** (Apple Silicon):
 
 ```sh
 conda env create -f envs/osx-arm64.lock.yaml

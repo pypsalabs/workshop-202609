@@ -7,7 +7,7 @@ project:
   - name: Iegor Riepin
   license: CC-BY-4.0
   open_access: true
-  copyright: 2026
+  copyright: "2026"
   github: pypsalabs/workshop-202609
   settings:
     output_matplotlib_strings: remove

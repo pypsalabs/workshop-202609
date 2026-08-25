@@ -3,7 +3,7 @@
 **10–11 September 2026**  
 **University of Birmingham · United Kingdom**  
 *Hosted by the
-[Supergen Energy Networks Hub](https://www.supergen-networks.org.uk/) and
+[Supergen Energy Networks Hub](https://supergenen.org/) and
 delivered by [PyPSA Labs](https://pypsalabs.org/).*
 
 ![A small PyPSA network built, optimised, and explored in Python.](pypsa-terminal.png)
@@ -73,7 +73,7 @@ Some familiarity with Python and `pandas` is helpful, but not required. Short in
 
 [Dr. Fabian Neumann](https://fneum.org) and [Dr. Iegor Riepin](https://iriepin.com/) are postdoctoral researchers at the
 [Department of Digital Transformation in Energy Systems](https://www.tu.berlin/en/ensys)
-at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on  identifying cost-effective pathways to climate neutrality, leveraging energy modelling to inform policy and public discourse. 
+at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on identifying cost-effective pathways to climate neutrality, leveraging energy modelling to inform policy and public discourse. 
 
 Fabian and Iegor are also co-founders
 of [PyPSA Labs](https://pypsalabs.org/). 
@@ -88,4 +88,4 @@ You can run the notebooks in your browser without installing dependencies locall
 
 ### Local installation
 
-If you are DIY person and want to run the notebooks on your own computer, you can follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `conda` users.
+If you prefer a DIY setup and want to run the notebooks on your own computer, you can follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `conda` users.
