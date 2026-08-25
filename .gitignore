@@ -1,0 +1,22 @@
+# MyST build outputs
+_build
+.ipynb_checkpoints
+
+# data and intermediate outputs
+bham/data
+bham/tmp/
+bham/*.csv
+*.geojson
+*.nc
+*.tiff
+*.tif
+*.html
+*.png
+!bham/logo*.png
+*cleared.ipynb
+data
+
+# python
+.venv
+__pycache__
+.ruff_cache

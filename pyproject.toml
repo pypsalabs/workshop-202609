@@ -1,0 +1,28 @@
+[project]
+name = "workshop-202609"
+version = "2026.09.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas>=2,<3",
+    "geopandas>=1",
+    "xarray",
+    "netcdf4",
+    "pypsa[excel]>=1.1",
+    "highspy>=1.5.3",
+    "ipython",
+    "jupyterlab",
+    "lxml",
+    "openpyxl",
+    "shapely>2",
+    "cartopy>=0.22",
+    "matplotlib>=3.9",
+    "plotly<6",
+    "folium",
+    "mapclassify",
+    "pyarrow",
+    "numba",
+    "jupyter-book>=2",
+    "pre-commit",
+]
