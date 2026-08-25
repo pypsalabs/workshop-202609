@@ -1,0 +1,24 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: PyPSA Workshop Birmingham
+  authors:
+  - name: Fabian Neumann
+  - name: Iegor Riepin
+  license: CC-BY-4.0
+  open_access: true
+  copyright: 2026
+  github: pypsalabs/workshop-202609
+  settings:
+    output_matplotlib_strings: remove
+  toc:
+  - file: bham/intro.md
+  - file: bham/setup.md
+  - file: bham/01-pypsa-intro.ipynb
+  - file: bham/annex-python.ipynb
+  - file: bham/annex-pandas.ipynb
+site:
+  options:
+    logo: bham/logo-secondary-light-pypsa.svg
+    folders: true
+  template: book-theme
