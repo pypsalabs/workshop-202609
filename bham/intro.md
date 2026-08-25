@@ -1,13 +1,12 @@
-# Welcome to the PyPSA workshop in Birmingham!
-
-<img src="https://docs.pypsa.org/latest/assets/logo/logo-primary-light.svg#only-light" width="260px" />
+# PyPSA Workshop Birmingham
 
 **10–11 September 2026**  
-**University of Birmingham · United Kingdom**
-
+**University of Birmingham · United Kingdom**  
 *Hosted by the
 [Supergen Energy Networks Hub](https://www.supergen-networks.org.uk/) and
 delivered by [PyPSA Labs](https://pypsalabs.org/).*
+
+<img src="https://docs.pypsa.org/latest/assets/logo/logo-primary-light.svg#only-light" width="260px" />
 
 ---
 
