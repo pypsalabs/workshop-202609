@@ -19,6 +19,7 @@ project:
   - file: bham/annex-pandas.ipynb
 site:
   options:
-    logo: bham/logo-secondary-light-pypsa.svg
+    logo: bham/logo-primary-light.svg
+    logo_dark: bham/logo-primary-dark.svg
     folders: true
   template: book-theme
