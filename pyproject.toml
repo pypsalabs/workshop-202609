@@ -24,3 +24,7 @@ dependencies = [
     "jupyter-book>=2",
     "pre-commit",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"bham/annex-pandas.ipynb" = ["C408"]
+"bham/annex-python.ipynb" = ["PLR0133", "SIM222", "SIM223"]

@@ -17,7 +17,7 @@ repos:
 
 # Run ruff to lint and format
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.9.2
+  rev: v0.16.4
   hooks:
     # Run the linter.
   - id: ruff
@@ -34,7 +34,8 @@ repos:
 
   # Do YAML formatting (before the linter checks it for misses)
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.15.0
+  rev: v2.16.0
   hooks:
   - id: pretty-format-yaml
+    exclude: ^envs/.*\.lock\.yaml$
     args: [--autofix, --indent, "2", --preserve-quotes]

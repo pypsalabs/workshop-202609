@@ -1,7 +1,7 @@
 # PyPSA Workshop Birmingham
 
-**10–11 September 2026**  
-**University of Birmingham · United Kingdom**  
+**10–11 September 2026**<br>
+**University of Birmingham · United Kingdom**<br>
 *Hosted by the
 [Supergen Energy Networks Hub](https://supergenen.org/) and
 delivered by [PyPSA Labs](https://pypsalabs.org/).*
@@ -25,7 +25,7 @@ European energy system model and data pipeline maintained at TU Berlin.
 - **Capacity expansion:**  Capacity planning problems with PyPSA
 - **Stochastic and risk-averse optimisation:** Handling uncertainty and risk management in energy system models
 - **Sector coupling:** Multi-carrier networks and energy conversion
-- **Other features:** Custom constraints, the statistics module, network explorer. 
+- **Other features:** Custom constraints, the statistics module, network explorer.
 - **PyPSA-Eur:** A tour through to the European energy system model workflow and data pipeline
 
 Some familiarity with Python and `pandas` is helpful, but not required. Short introductions to both are included in the annexes.
@@ -73,10 +73,10 @@ Some familiarity with Python and `pandas` is helpful, but not required. Short in
 
 [Dr. Fabian Neumann](https://fneum.org) and [Dr. Iegor Riepin](https://iriepin.com/) are postdoctoral researchers at the
 [Department of Digital Transformation in Energy Systems](https://www.tu.berlin/en/ensys)
-at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on identifying cost-effective pathways to climate neutrality, leveraging energy modelling to inform policy and public discourse. 
+at [Technische Universität Berlin](https://www.tu.berlin/en). Their research work focuses on identifying cost-effective pathways to climate neutrality, leveraging energy modelling to inform policy and public discourse.
 
 Fabian and Iegor are also co-founders
-of [PyPSA Labs](https://pypsalabs.org/). 
+of [PyPSA Labs](https://pypsalabs.org/).
 
 
 
