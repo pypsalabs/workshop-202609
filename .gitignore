@@ -14,6 +14,7 @@ bham/*.csv
 *.png
 !bham/logo*.png
 !bham/pypsa-terminal.png
+!bham/cvar-distribution.png
 *cleared.ipynb
 data
 
