@@ -41,8 +41,15 @@ Pushes to `main` build and deploy the website through GitHub Actions. Lockfiles 
 
 ## Credits
 
-This workshop is created using the open
-source [Jupyter Book project](https://jupyterbook.org/).
+Some of the workshop materials are adapted from Fabian Neumann's fantastic
+[Data Science for Energy System Modelling](https://fneum.github.io/data-science-for-esm/)
+course at TU Berlin.
+
+The workshop also draws on examples and explanations from the
+[PyPSA documentation](https://docs.pypsa.org/).
+
+This workshop is created using the open-source
+[Jupyter Book project](https://jupyterbook.org/).
 
 ## License
 
