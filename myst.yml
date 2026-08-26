@@ -17,6 +17,7 @@ project:
   - file: bham/01-pypsa-intro.ipynb
   - file: bham/02-pypsa-dispatch-problems.ipynb
   - file: bham/03-pypsa-sectors-expansion.ipynb
+  - file: bham/04-pypsa-scenarios.ipynb
   - file: bham/annex-python.ipynb
   - file: bham/annex-pandas.ipynb
 site:
