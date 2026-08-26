@@ -19,8 +19,6 @@ dependencies = [
     "cartopy>=0.22",
     "matplotlib>=3.9",
     "plotly<6",
-    "folium",
-    "mapclassify",
     "pyarrow",
     "numba",
     "jupyter-book>=2",

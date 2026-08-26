@@ -8,7 +8,7 @@ dependencies:
   # main packages
 - numpy
 - scipy
-- pandas>=2
+- pandas>=2,<3
 - geopandas>=1
 - xarray
 - netcdf4
@@ -30,8 +30,6 @@ dependencies:
   # plotting
 - matplotlib>=3.9
 - plotly<6
-- folium
-- mapclassify
 
   # development tools
 - pre-commit
