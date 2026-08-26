@@ -17,6 +17,9 @@ bham/*.csv
 !bham/cvar-distribution.png
 *cleared.ipynb
 data
+!bham/data/
+!bham/data/phl-network.nc
+!bham/data/time-series-sample.csv
 
 # local asset-generation utilities
 .local/
