@@ -82,10 +82,20 @@ of [PyPSA Labs](https://pypsalabs.org/).
 
 ## Technical setup
 
-### Google Colab
+### Workshop JupyterHub (recommended)
 
-You can run the notebooks in your browser without installing dependencies locally, using [Google Colab](https://colab.research.google.com/). For that, on any notebook page, click **🚀 Open this notebook in Google Colab**. Colab opens the notebook directly from GitHub; a Google account is required.
+Run everything in your browser with all packages pre-installed, on the workshop JupyterHub:
+
+1. Open [workshop.pypsalabs.org](https://workshop.pypsalabs.org).
+2. Log in with any username you like and the **workshop password** shown by the presenter.
+3. The materials are already in your workspace, under `workshop-202609/bham/`. Open `01-pypsa-intro.ipynb` to begin.
+
+Your files are saved between the two workshop days.
+
+### Google Colab (fallback)
+
+No hub access? You can also run the notebooks in [Google Colab](https://colab.research.google.com/): on any notebook page, click **🚀 Open this notebook in Google Colab** (a Google account is required). On Colab you install the packages yourself, as noted at the top of each notebook.
 
 ### Local installation
 
-If you prefer a DIY setup and want to run the notebooks on your own computer, you can follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `conda` users.
+If you prefer to run the notebooks on your own computer, follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `pixi` users.

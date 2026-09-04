@@ -1,6 +1,6 @@
 # Local Installation (optional)
 
-You do not need a local installation if you are using Google Colab. For a local setup, first get a copy of the workshop repository by running:
+You do not need a local installation if you are using the workshop JupyterHub or Google Colab. For a local setup, first get a copy of the workshop repository by running:
 
 ```sh
 git clone https://github.com/pypsalabs/workshop-202609.git
@@ -37,56 +37,31 @@ this environment:
 uv run jupyter lab
 ```
 
-## Option B: Using `conda`
+## Option B: Using `pixi`
 
-If you already use [Anaconda or
-miniconda](https://www.anaconda.com/docs/getting-started/getting-started), you
-can create the workshop environment from one of the provided **pinned** lock
-files. These list exact package versions so that everyone has the same
-environment, and they depend on your operating system.
-
-In the root folder of the workshop repository, run the command matching your
-system:
-
-For **Windows**:
+Install [`pixi`](https://pixi.sh) following its [installation
+instructions](https://pixi.sh/latest/installation/), and verify that it works:
 
 ```sh
-conda env create -f envs/win-64.lock.yaml
+pixi --version
 ```
 
-For **macOS** (Intel/AMD):
+Then, in the root folder of the workshop repository (where the `pixi.toml` and
+`pixi.lock` files are located), install the environment from the committed lock
+file. This gives everyone the same **pinned** package versions for their
+operating system:
 
 ```sh
-conda env create -f envs/osx-64.lock.yaml
+pixi install
 ```
 
-For **macOS** (Apple Silicon):
+Once this is done, start a Jupyter Lab session in this environment:
 
 ```sh
-conda env create -f envs/osx-arm64.lock.yaml
-```
-
-For **Linux**:
-
-```sh
-conda env create -f envs/linux-64.lock.yaml
+pixi run jupyter lab
 ```
 
 :::{note}
-This process may take some time. If the environment cannot be created from the
-pinned file, try the unpinned
-[`envs/environment.yaml`](https://github.com/pypsalabs/workshop-202609/blob/main/envs/environment.yaml)
-instead.
-:::
-
-Then **activate** the environment and start Jupyter Lab:
-
-```sh
-conda activate workshop-202609
-jupyter lab
-```
-
-:::{warning}
-The activation step has to be repeated whenever you open a new terminal; it is
-not persistent across terminal sessions.
+No activation step is needed. `pixi run` always uses the project environment, so
+it works the same in every new terminal.
 :::
