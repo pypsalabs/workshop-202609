@@ -11,9 +11,21 @@ project:
   github: pypsalabs/workshop-202609
   settings:
     output_matplotlib_strings: remove
+  # Slide-deck PDFs, copied verbatim into the built site (dev server and HTML
+  # export). Each entry lands at the site root under its basename, so a single
+  # source file is published at both /<file>.pdf and /bham/<file>.pdf — the two
+  # places where the slide pages' iframes resolve `../<file>.pdf`, depending on
+  # whether the page URL carries a trailing slash (GitHub Pages redirects to
+  # `/bham/<page>/`; the dev server and in-site navigation use `/bham/<page>`).
+  static_files:
+  - public/bham
+  - public/bham/PyPSA-Birmingham.pdf
+  - public/bham/PyPSA-Eur-Birmingham.pdf
   toc:
   - file: bham/intro.md
   - file: bham/setup.md
+  - file: bham/pypsa-ecosystem.md
+  - file: bham/pypsa-eur-model.md
   - file: bham/01-pypsa-intro.ipynb
   - file: bham/02-pypsa-dispatch-problems.ipynb
   - file: bham/03-pypsa-sectors-expansion.ipynb
