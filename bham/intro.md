@@ -88,7 +88,7 @@ Run everything in your browser with all packages pre-installed, on the workshop 
 
 1. Open [workshop.pypsalabs.org](https://workshop.pypsalabs.org).
 2. Log in with any username you like and the **workshop password** shown by the presenter.
-3. The materials are already in your workspace, under `workshop-202609/bham/`. Open `01-pypsa-intro.ipynb` to begin.
+3. The workshop notebooks are already in your workspace. Open `01-pypsa-intro.ipynb` to begin.
 
 Your files are saved between the two workshop days.
 

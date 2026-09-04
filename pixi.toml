@@ -29,12 +29,8 @@ pypsa = { version = ">=1.1", extras = ["excel"] }
 jupyter-book = ">=2"
 
 # Extra packages only the single-user Docker image needs (not local Option B).
-[feature.image.dependencies]
-git = "*"          # nbgitpuller shells out to git to auto-load the materials
-
 [feature.image.pypi-dependencies]
 jupyterhub = "*"   # provides jupyterhub-singleuser; pypi build avoids the node/proxy conda dep
-nbgitpuller = "*"
 
 [environments]
 default = { solve-group = "default" }

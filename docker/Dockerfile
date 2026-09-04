@@ -9,12 +9,8 @@ COPY pixi.toml pixi.lock ./
 RUN pixi install --locked -e image
 # Pure activation script (sets PATH + conda/proj/gdal env vars for the geo stack).
 RUN pixi shell-hook -e image -s bash > /activate.sh
-# Entrypoint: activate the pixi env, auto-load the workshop materials into the
-# user's workspace (clone on first login, non-destructive merge after), then run
-# the spawner's command. `|| true` so a GitHub hiccup never blocks server start.
-RUN cp /activate.sh /entrypoint.sh && printf '%s\n' \
-    'gitpuller https://github.com/pypsalabs/workshop-202609 main /home/jovyan/work/workshop-202609 || true' \
-    'exec "$@"' >> /entrypoint.sh
+# Entrypoint: activate the pixi env, then run the spawner's command.
+RUN cp /activate.sh /entrypoint.sh && printf '%s\n' 'exec "$@"' >> /entrypoint.sh
 
 FROM debian:bookworm-slim AS runtime
 # The pixi env prefix must stay at the same absolute path as in the build stage
@@ -24,9 +20,12 @@ COPY --from=build /entrypoint.sh /entrypoint.sh
 # Activate the env for login shells too (e.g. a JupyterLab terminal).
 COPY --from=build /activate.sh /etc/profile.d/pixi.sh
 COPY docker/jupyter_server_config.py /etc/jupyter/jupyter_server_config.py
-RUN useradd -m -u 1000 -s /bin/bash jovyan \
-    && mkdir -p /home/jovyan/work \
-    && chown -R jovyan:jovyan /home/jovyan
+RUN useradd -m -u 1000 -s /bin/bash jovyan && mkdir -p /home/jovyan/work
+# Bake only the workshop notebooks (+ the one image a notebook embeds). Docker
+# copies these into a fresh per-user volume on first mount, so each participant's
+# workspace starts with just the notebooks - no repo scaffolding, no git.
+COPY bham/*.ipynb bham/cvar-distribution.png /home/jovyan/work/
+RUN chown -R jovyan:jovyan /home/jovyan
 # PATH fallback for non-login shells; profile.d handles full activation for login shells.
 ENV PATH=/app/.pixi/envs/image/bin:$PATH
 ENV JUPYTER_CONFIG_DIR=/etc/jupyter
