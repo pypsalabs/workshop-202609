@@ -1,6 +1,6 @@
 # Builds the single-user notebook image and pushes it to GHCR.
 # ONE-TIME manual step after the first run: make the GHCR package
-# `workshop-202609-notebook` public (org -> Packages -> package -> settings ->
+# `workshop-notebook` public (org -> Packages -> package -> settings ->
 # Change visibility) so the Elestio VM pulls it without credentials.
 name: Build notebook image
 
@@ -34,7 +34,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/pypsalabs/workshop-202609-notebook
+          images: ghcr.io/pypsalabs/workshop-notebook
           tags: |
             type=raw,value=latest
             type=sha
