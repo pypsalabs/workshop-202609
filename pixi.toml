@@ -1,0 +1,41 @@
+[project]
+name = "workshop-202609"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+python = ">=3.13,<3.14"
+numpy = "*"
+scipy = "*"
+pandas = ">=2,<3"
+geopandas = ">=1"
+xarray = "*"
+netcdf4 = "*"
+pyarrow = "*"
+numba = "*"
+ipython = "*"
+jupyterlab = "*"
+lxml = "*"
+openpyxl = "*"
+shapely = ">2"
+cartopy = ">=0.22"
+matplotlib = ">=3.9"
+plotly = "<6"
+pre-commit = "*"
+
+[pypi-dependencies]
+highspy = ">=1.5.3"
+pypsa = { version = ">=1.1", extras = ["excel"] }
+jupyter-book = ">=2"
+
+# Extra packages only the single-user Docker image needs (not local Option B).
+[feature.image.dependencies]
+git = "*"          # nbgitpuller shells out to git to auto-load the materials
+
+[feature.image.pypi-dependencies]
+jupyterhub = "*"   # provides jupyterhub-singleuser; pypi build avoids the node/proxy conda dep
+nbgitpuller = "*"
+
+[environments]
+default = { solve-group = "default" }
+image = { features = ["image"], solve-group = "default" }

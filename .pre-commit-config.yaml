@@ -37,5 +37,5 @@ repos:
   rev: v2.16.0
   hooks:
   - id: pretty-format-yaml
-    exclude: ^envs/.*\.lock\.yaml$
+    exclude: ^pixi\.lock$
     args: [--autofix, --indent, "2", --preserve-quotes]

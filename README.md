@@ -30,14 +30,19 @@ uv run jupyter-book build --html --execute
 
 ### Environments and deployment
 
-Dependencies are declared in `pyproject.toml` for uv/pip and
-`envs/environment.yaml` for conda. Reproducible installations use:
+Dependencies are declared in `pyproject.toml` for uv/pip and `pixi.toml` for
+pixi (conda-forge). Reproducible installations use:
 
 - `uv.lock` with `uv sync`
 - `requirements.lock` with `pip install -r requirements.lock`
-- `envs/<platform>.lock.yaml` with `conda env create -f envs/<platform>.lock.yaml`
+- `pixi.lock` with `pixi install` (run `pixi update` to refresh it)
 
-Pushes to `main` build and deploy the website through GitHub Actions. Lockfiles are generated locally and committed when the dependencies change. Participant-facing installation instructions are in `bham/setup.md`.
+Pushes to `main` build and deploy the website through GitHub Actions. A separate
+workflow (`.github/workflows/build-notebook-image.yml`) builds the single-user
+notebook image for the workshop JupyterHub from the pixi `image` environment and
+pushes it to GHCR. Lockfiles are generated locally and committed when
+dependencies change. Participant-facing installation instructions are in
+`bham/setup.md`.
 
 ## Credits
 
