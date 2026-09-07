@@ -13,7 +13,7 @@ are in scope):
 docker build -f docker/Dockerfile -t workshop-notebook .
 ```
 
-CI (`.github/workflows/build-notebook-image.yml`) builds and pushes it to
+CI (`.github/workflows/notebook-image.yml`) builds and pushes it to
 `ghcr.io/pypsalabs/workshop-notebook` on every change to `docker/**`,
 `pixi.toml`, or `pixi.lock`. The Elestio spawner pulls it via the
 `DOCKER_NOTEBOOK_IMAGE` env var.

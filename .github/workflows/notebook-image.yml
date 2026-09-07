@@ -1,14 +1,17 @@
-# Builds the single-user notebook image and pushes it to GHCR.
+# Builds the single-user notebook image and pushes it to GHCR. It does NOT
+# touch the VM - run "Hub reset" to make a new image live for users.
+#
 # ONE-TIME manual step after the first run: make the GHCR package
 # `workshop-notebook` public (org -> Packages -> package -> settings ->
-# Change visibility) so the Elestio VM pulls it without credentials.
-name: Build notebook image
+# Change visibility) so the VM pulls it without credentials.
+name: Notebook image
 
 on:
   push:
     branches: [main]
     paths:
       - docker/**
+      - bham/**
       - pixi.toml
       - pixi.lock
   workflow_dispatch:
@@ -23,15 +26,13 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Log in to GHCR
-        uses: docker/login-action@v3
+      - uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Image metadata
-        id: meta
+      - id: meta
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/pypsalabs/workshop-notebook
@@ -39,8 +40,7 @@ jobs:
             type=raw,value=latest
             type=sha
 
-      - name: Build and push
-        uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v6
         with:
           context: .
           file: docker/Dockerfile

@@ -35,7 +35,7 @@ installations use `pixi.lock` with `pixi install` (run `pixi update` to refresh
 it).
 
 Pushes to `main` build and deploy the website through GitHub Actions. A separate
-workflow (`.github/workflows/build-notebook-image.yml`) builds the single-user
+workflow (`.github/workflows/notebook-image.yml`) builds the single-user
 notebook image for the workshop JupyterHub from the pixi `image` environment and
 pushes it to GHCR. Lockfiles are generated locally and committed when
 dependencies change. Participant-facing installation instructions are in

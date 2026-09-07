@@ -1,0 +1,40 @@
+# Manual deploy button (Actions tab -> Run workflow). This is the ONLY thing
+# that changes what runs on the VM - pushes just build the image to GHCR.
+#
+# Both modes pull the latest image, then:
+#   soft - stop running user servers so they re-spawn on the new image.
+#          Briefly kicks live sessions, keeps all user data.
+#   hard - also delete every user volume, re-seeding notebooks from the new
+#          image on next login. PERMANENTLY erases user notebooks and edits.
+name: Hub reset
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "soft = new image, keep data. hard = new image, WIPE all user data."
+        type: choice
+        options: [soft, hard]
+        default: soft
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          VM_SSH_KEY: ${{ secrets.VM_SSH_KEY }}
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$VM_SSH_KEY" > ~/.ssh/id
+          chmod 600 ~/.ssh/id
+          PULL='docker pull ghcr.io/pypsalabs/workshop-notebook:latest'
+          STOP='docker ps -q --filter name=jupyter- | xargs -r docker stop'
+          WIPE='docker volume ls -q --filter name=^jupyterhub- | xargs -r docker volume rm'
+          if [ "$MODE" = "hard" ]; then
+            REMOTE="$PULL && $STOP && $WIPE"
+          else
+            REMOTE="$PULL && $STOP"
+          fi
+          ssh -i ~/.ssh/id -o StrictHostKeyChecking=accept-new \
+            root@jupyter-hub-u78259.vm.elestio.app "$REMOTE"
