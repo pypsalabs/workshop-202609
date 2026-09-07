@@ -107,4 +107,4 @@ No hub access? You can also run the notebooks in [Google Colab](https://colab.re
 
 ### Local installation
 
-If you prefer to run the notebooks on your own computer, follow the instructions on the next page. You will need to install Python and some additional packages. The instructions are provided for both `uv` and `pixi` users.
+If you prefer to run the notebooks on your own computer, follow the instructions on the next page. You will need to install `pixi`, which sets up Python and all required packages for you.

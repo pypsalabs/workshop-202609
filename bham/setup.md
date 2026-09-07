@@ -10,34 +10,7 @@ or by downloading the repository as a ZIP file (look for a green "Code" button
 at https://github.com/pypsalabs/workshop-202609) and extracting it to a local
 folder.
 
-Then pick **one** of the two options below.
-
-## Option A: Using `uv` (recommended)
-
-Install `uv` following its [installation
-instructions](https://docs.astral.sh/uv/getting-started/installation/) for your
-operating system, and verify that it works:
-
-```sh
-uv --version
-```
-
-Then, in the root folder of the workshop repository (where the `pyproject.toml`
-and `uv.lock` files are located), install all required packages and set up the
-environment with a single command:
-
-```sh
-uv sync
-```
-
-Once this is done, you can start a Jupyter Lab session in your browser with
-this environment:
-
-```sh
-uv run jupyter lab
-```
-
-## Option B: Using `pixi`
+## Using `pixi`
 
 Install [`pixi`](https://pixi.sh) following its [installation
 instructions](https://pixi.sh/latest/installation/), and verify that it works:

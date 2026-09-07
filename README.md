@@ -14,28 +14,25 @@ The materials are published as a [Jupyter Book 2](https://jupyterbook.org)
 
 ### Develop locally
 
-Install [`uv`](https://docs.astral.sh/uv/), clone the repository, and run:
+Install [`pixi`](https://pixi.sh), clone the repository, and run:
 
 ```sh
-uv sync
-uv run jupyter book start
+pixi install
+pixi run jupyter book start
 ```
 
 This serves a local live preview. Workshop sources are in `bham/`. To execute all notebooks and create the deployable site in
 `_build/html/`, run:
 
 ```sh
-uv run jupyter-book build --html --execute
+pixi run jupyter-book build --html --execute
 ```
 
 ### Environments and deployment
 
-Dependencies are declared in `pyproject.toml` for uv/pip and `pixi.toml` for
-pixi (conda-forge). Reproducible installations use:
-
-- `uv.lock` with `uv sync`
-- `requirements.lock` with `pip install -r requirements.lock`
-- `pixi.lock` with `pixi install` (run `pixi update` to refresh it)
+Dependencies are declared in `pixi.toml` (conda-forge). Reproducible
+installations use `pixi.lock` with `pixi install` (run `pixi update` to refresh
+it).
 
 Pushes to `main` build and deploy the website through GitHub Actions. A separate
 workflow (`.github/workflows/build-notebook-image.yml`) builds the single-user
