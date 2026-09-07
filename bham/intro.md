@@ -30,6 +30,15 @@ European energy system model and data pipeline maintained at TU Berlin.
 
 Some familiarity with Python and `pandas` is helpful, but not required. Short introductions to both are included in the annexes.
 
+## Venue
+
+The Old Gym Lecture Theatre, room LG06 (lower ground floor)<br>
+Y1 building – Old Gym, University of Birmingham. <br>
+[Building entrance](https://w3w.co/party.glue.laying) ·
+[Room](https://w3w.co/payer.debate.cone) ·
+[Campus map (building Y1)](https://www.birmingham.ac.uk/contact/campus-map)
+
+
 ## Preliminary agenda
 
 :::{div}
