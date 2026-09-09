@@ -37,4 +37,4 @@ jobs:
             REMOTE="$PULL && $STOP"
           fi
           ssh -i ~/.ssh/id -o StrictHostKeyChecking=accept-new \
-            root@jupyter-hub-u78259.vm.elestio.app "$REMOTE"
+            root@jupyterhub-ietu8-u78259.vm.elestio.app "$REMOTE"
