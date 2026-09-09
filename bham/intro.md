@@ -49,13 +49,13 @@ Y1 building – Old Gym, University of Birmingham. <br>
 | Time | Session |
 |---|---|
 | 09:00–10:00 | *Soft start: arrival, coffee, getting to know each other* |
-| 10:00–11:00 | **Introduction to the PyPSA ecosystem** |
-| 11:00–11:15 | *Break* |
-| 11:15–12:30 | **Introduction to optimisation with PyPSA** |
+| 10:00–10:45 | **Introduction to the PyPSA ecosystem** |
+| 10:45–11:00 | *Break* |
+| 11:00–12:30 | **Introduction to optimisation with PyPSA** |
 | 12:30–13:30 | *Lunch* |
-| 13:30–15:00 | **Modelling with PyPSA: system capacity planning, sector coupling, results retrieval and statistics** |
-| 15:00–15:15 | *Break* |
-| 15:15–17:00 | **PyPSA-Eur workflow: introduction and hands-on modelling** |
+| 13:30–15:30 | **Modelling with PyPSA: system capacity planning, sector coupling, results retrieval and statistics** |
+| 15:30–15:45 | *Break* |
+| 15:45–17:00 | **PyPSA-Eur workflow: introduction and hands-on modelling** |
 | 17:00–17:30 | **Wrap-up of day 1 and open questions** |
 | From 18:30 | *Shared dinner at Stable Pizza (Birmingham city centre)* |
 
